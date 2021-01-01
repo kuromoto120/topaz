@@ -303,14 +303,14 @@ def backup_db(silent=False,lite=False):
             tables = ' '
             for table in player_data:
                 tables += table[:-4] + ' '
-            dumpcmd = '"' + mysql_bin + 'mysqldump' + exe + '" --hex-blob --add-drop-trigger -h ' + host + ' -P ' + str(port) + ' -u ' + login + ' -p' + password + ' ' + database +\
+            dumpcmd = '"' + mysql_bin + 'mysqldump' + exe + '" --hex-blob -h ' + host + ' -P ' + str(port) + ' -u ' + login + ' -p' + password + ' ' + database +\
                 tables + '> ../sql/backups/' + database + '-' + time.strftime('%Y%m%d-%H%M%S') + '-lite.sql'
         else:
             if current_version:
-                dumpcmd = '"' + mysql_bin + 'mysqldump' + exe + '" --hex-blob --add-drop-trigger -h ' + host + ' -P ' + str(port) + ' -u ' + login + ' -p' + password + ' ' + database +\
+                dumpcmd = '"' + mysql_bin + 'mysqldump' + exe + '" --hex-blob -h ' + host + ' -P ' + str(port) + ' -u ' + login + ' -p' + password + ' ' + database +\
                     ' > ../sql/backups/' + database + '-' + time.strftime('%Y%m%d-%H%M%S') + '-' + current_version + '.sql'
             else:
-                dumpcmd = '"' + mysql_bin + 'mysqldump' + exe + '" --hex-blob --add-drop-trigger -h ' + host + ' -P ' + str(port) + ' -u ' + login + ' -p' + password + ' ' + database +\
+                dumpcmd = '"' + mysql_bin + 'mysqldump' + exe + '" --hex-blob -h ' + host + ' -P ' + str(port) + ' -u ' + login + ' -p' + password + ' ' + database +\
                     ' > ../sql/backups/' + database + time.strftime('%Y%m%d-%H%M%S') + '-full.sql'
         os.system(dumpcmd + log_errors)
         fetch_errors()
