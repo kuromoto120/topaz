@@ -1,6 +1,6 @@
------------------------------------------------
+-----------------------------------
 -------------   GLOBAL SETTINGS   -------------
------------------------------------------------
+-----------------------------------
 
 -- This is to allow server operators to further customize their servers.  As more features are added to pXI, the list will surely expand.
 -- Anything scripted can be customized with proper script editing.
@@ -36,8 +36,17 @@ FOV_REWARD_ALLIANCE = 0 -- Allow Fields of Valor rewards while being a member of
 GOV_REWARD_ALLIANCE = 1 -- Allow Grounds of Valor rewards while being a member of an alliance. (default retail behavior: 1)
 
 -- Records of Eminence
-ENABLE_ROE = 1
-ENABLE_ROE_TIMED = 1 -- Enable 4-hour timed records
+ENABLE_ROE            = 1
+ENABLE_ROE_TIMED      = 1 -- Enable 4-hour timed records
+ENABLE_EXCHANGE_LIMIT = 1 -- Enable Maximum limit of sparks spent per Week (default retail behavior: 1)
+
+WEEKLY_EXCHANGE_LIMIT = 100000 -- Maximum amount of sparks that can be spent per week (default retail value: 100000)
+
+-- Currency Caps (Change at your own risk!)
+CAP_CURRENCY_ACCOLADES = 99999
+CAP_CURRENCY_BALLISTA  = 2000
+CAP_CURRENCY_SPARKS    = 99999
+CAP_CURRENCY_VALOR     = 50000
 
 -- Magian Trials
 ENABLE_MAGIAN_TRIALS = 1
@@ -59,13 +68,13 @@ INITIAL_LEVEL_CAP = 50 -- The initial level cap for new players.  There seems to
 MAX_LEVEL = 99 -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
 NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 0 -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
 NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 0 -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
-START_GIL = 10000 -- Amount of gil given to newly created characters.
+START_GIL = 1000000 -- Amount of gil given to newly created characters.
 START_INVENTORY = 80 -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
 NEW_CHARACTER_CUTSCENE = 0 -- Set to 1 to enable opening cutscenes, 0 to disable.
 SUBJOB_QUEST_LEVEL = 18 -- Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
 ADVANCED_JOB_LEVEL = 30 -- Minimum level to accept advanced job quests.  Set to 0 to start the game with advanced jobs.
 ALL_MAPS = 1 -- Set to 1 to give starting characters all the maps.
-UNLOCK_OUTPOST_WARPS = 1 -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
+UNLOCK_OUTPOST_WARPS = 2 -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE      = 1.000 -- Multiplies prices in NPC shops.
 GIL_RATE        = 4.000 -- Multiplies gil earned from quests.  Won't always display in game.
